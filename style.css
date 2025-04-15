@@ -1,73 +1,47 @@
+/* Default light mode */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    transition: background 0.3s, color 0.3s;
-  }
-  header, footer, #tools {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-  main {
-    flex: 1;
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+#chat-container {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#chat-box {
+    height: 300px;
     overflow-y: auto;
+    border: 1px solid #ddd;
     padding: 10px;
-  }
-  .chat {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 80%;
-    white-space: pre-wrap;
-  }
-  .user { align-self: flex-end; }
-  .ai { align-self: flex-start; }
-  img.generated {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  input[type="text"] {
-    flex: 1;
-    padding: 10px;
-  }
-  button, select {
-    padding: 10px;
-  }
-  label {
-    font-size: 12px;
-  }
-  .quick {
-    margin: 5px 0;
-  }
-  .quick button {
-    margin-right: 5px;
-  }
-  
-  /* Themes */
-  body.light {
-    background: #f0f0f0;
-    color: #000;
-  }
-  header.light, footer.light, #tools.light {
-    background: #1e90ff;
-    color: white;
-  }
-  .user.light { background: #d1e7ff; }
-  .ai.light { background: #e2e2e2; }
-  
-  body.dark {
-    background: #1a1a1a;
-    color: #eee;
-  }
-  header.dark, footer.dark, #tools.dark {
-    background: #333;
-    color: white;
-  }
-  .user.dark { background: #34495e; }
-  .ai.dark { background: #444; }
-  
+}
+
+#user-input {
+    width: 80%;
+    padding: 5px;
+}
+
+#send-btn {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#chat-box.dark-mode {
+    background-color: #444;
+    color: #fff;
+}
