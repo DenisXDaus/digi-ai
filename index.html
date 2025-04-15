@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digi AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header>
+    <h1>Digi AI</h1>
+    <select id="mode">
+      <option value="chat">Chat</option>
+      <option value="nulis">Nulis</option>
+      <option value="hitung">Hitung</option>
+      <option value="translate">Translate</option>
+    </select>
+    <button id="toggle-theme">🌙</button>
+  </header>
+
+  <main id="chat-box"></main>
+
+  <footer>
+    <input type="text" id="input" placeholder="Tulis sesuatu...">
+    <button onclick="sendMessage()">Kirim</button>
+    <button onclick="startVoice()">🎙️</button>
+  </footer>
+
+  <section id="tools">
+    <input type="text" id="username" placeholder="Nama kamu">
+    <button onclick="saveUser()">Login</button>
+    <button onclick="exportChat()">📤 Export</button>
+    <input type="file" id="importChat" onchange="importChat()" hidden>
+    <button onclick="document.getElementById('importChat').click()">📥 Import</button>
+    <button onclick="clearChat()">🗑️ Clear</button>
+    <label>🔊 Volume: <input type="range" id="vol" min="0" max="1" step="0.1" value="1"></label>
+    <label>🎚️ Pitch: <input type="range" id="pitch" min="0" max="2" step="0.1" value="1"></label>
+    <label>🚀 Rate: <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1"></label>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
